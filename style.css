@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.thumbnail {
+  transition: transform 0.3s;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+#modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10;
+}
+
+#modal-close-button {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 90%;
+  max-height: 90%;
+  transform: translate(-50%, -50%);
+}
+
+/* We use transform: translate(-50%, -50%) to perfectly center the modal's content within the viewport. When combined with top: 50%; and left: 50%;, the modal's top-left corner is positioned at the center of its container. The translate adjustment then shifts the modal back by half of its own width and height, ensuring that its center aligns with the container's center, achieving a true central placement. */
+
